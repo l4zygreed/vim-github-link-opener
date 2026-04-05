@@ -1,10 +1,6 @@
 " Shamelessly cribbed from https://github.com/christoomey/vim-quicklink
 function! s:OpenWithNetrw(url)
-  if has("patch-7.4.567")
-    call netrw#BrowseX(a:url, 0)
-  else
-    call netrw#NetrwBrowseX(a:url, 0)
-  endif
+  call netrw#BrowseX(a:url)
 endfunction
 
 function! s:OpenGitHubLink()
